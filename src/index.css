@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+:root {
+  font-family: "Montserrat", sans-serif;
+}
+
+@keyframes liquidTextIn {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.99);
+    filter: blur(6px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(0) scale(1.01);
+    filter: blur(1.5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.liquid-text-in {
+  animation: liquidTextIn 800ms cubic-bezier(.22, .8, .24, 1) both;
+  will-change: transform, filter, opacity;
+}
+
+/* rispetto preferenze utente */
+@media (prefers-reduced-motion: reduce) {
+  .liquid-text-in {
+    animation: none !important;
+    filter: none !important;
+  }
+}
