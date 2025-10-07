@@ -11,6 +11,19 @@
   <link rel="shortcut icon" href="favicon/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
   <link rel="manifest" href="favicon/site.webmanifest" />
+  <script>
+    // Se arriviamo dopo il redirect di 404.html, ripristiniamo il path richiesto
+    (function () {
+      try {
+        var p = sessionStorage.getItem('redirectPath');
+        if (p) {
+          sessionStorage.removeItem('redirectPath');
+          var newUrl = (p.startsWith('/') ? p : '/' + p);
+          if (location.pathname !== newUrl) history.replaceState(null, '', newUrl);
+        }
+      } catch (e) { }
+    })();
+  </script>
 </head>
 
 <body>

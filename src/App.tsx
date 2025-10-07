@@ -2,6 +2,7 @@
 import Animatedlogo from './components/animatedlogo'
 import { AuroraBackground } from './components/AuroraBackground/AuroraBackground'
 import { AuroraGlassButton } from './components/Aurorabtn'
+import { Link } from 'react-router-dom'
 
 
 function App() {
@@ -10,6 +11,12 @@ function App() {
       <AuroraBackground />
       {/* Contenuto principale */}
       <div className="w-full max-w-4xl px-4 z-10">
+        {/* Nav */}
+        <nav className="flex justify-center gap-6 mb-6 text-white/80">
+          <Link to="/" className="hover:underline">Home</Link>
+          <Link to="/about" className="hover:underline">About</Link>
+          <Link to="/contatti" className="hover:underline">Contatti</Link>
+        </nav>
         {/* Contenuto principale */}
         <div className="card bg-[rgba(40,40,55,0.30)] backdrop-blur-xl rounded-xl shadow-xl p-8 border border-white/10">
           {/* Logo */}
