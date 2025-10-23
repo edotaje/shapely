@@ -1,10 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 
 @import "tailwindcss";
 @plugin "daisyui";
 
-:root {
-  font-family: "Montserrat", sans-serif;
+:root {}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter Tight", sans-serif;
+  font-optical-sizing: auto;
+}
+
+p,
+button {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
 }
 
 @keyframes liquidTextIn {
@@ -38,4 +57,246 @@
     animation: none !important;
     filter: none !important;
   }
+}
+
+/* Aurora Effect - Purple */
+.aurora-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  mix-blend-mode: screen;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.aurora-blob-1 {
+  top: 10%;
+  left: 20%;
+  width: 500px;
+  height: 500px;
+  /* Blu elettrico/Cyan */
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.8) 0%, rgba(14, 165, 233, 0.6) 40%, transparent 70%);
+  animation: float-1 10s infinite;
+}
+
+.aurora-blob-2 {
+  top: 50%;
+  right: 15%;
+  width: 600px;
+  height: 600px;
+  /* Viola intenso/Ametista */
+  background: radial-gradient(circle, rgba(147, 51, 234, 0.8) 0%, rgba(126, 34, 206, 0.6) 40%, transparent 70%);
+  animation: float-2 10s infinite;
+}
+
+.aurora-blob-3 {
+  bottom: 10%;
+  left: 40%;
+  width: 550px;
+  height: 550px;
+  /* Magenta vivace/Fucsia */
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.8) 0%, rgba(219, 39, 119, 0.6) 40%, transparent 70%);
+  animation: float-3 8s infinite;
+}
+
+@keyframes float-1 {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(50px, 100px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-50px, 50px) scale(0.9);
+  }
+}
+
+@keyframes float-2 {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(-80px, -60px) scale(1.15);
+  }
+
+  66% {
+    transform: translate(60px, -80px) scale(0.95);
+  }
+}
+
+@keyframes float-3 {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(-60px, -50px) scale(1.05);
+  }
+
+  66% {
+    transform: translate(80px, 70px) scale(1.1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora-blob {
+    animation: none !important;
+  }
+}
+
+/* Gradient Text Effect for Hero Titles */
+.gradient-text {
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(220, 200, 255, 0.95) 50%,
+      rgba(200, 180, 255, 0.9) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Gradient Background for Service Tags */
+.service-tag-gradient {
+  background: linear-gradient(135deg,
+      rgba(59, 130, 246, 0.12) 0%,
+      rgba(147, 51, 234, 0.15) 50%,
+      rgba(236, 72, 153, 0.12) 100%);
+}
+
+/* Gradient Background for Service Cards - Exact Style */
+.service-card-gradient {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(25% 50% at 0% 50%,
+      rgba(168, 85, 247, 0.1) 0%,
+      rgba(147, 51, 234, 0.05) 36.4865%,
+      #0d0d0d 100%);
+  border: 1px solid #222;
+  border-radius: 10px;
+  padding: 40px;
+  display: flex;
+  flex-flow: column;
+  flex: 1 0 0;
+  place-content: flex-start center;
+  align-items: flex-start;
+  gap: 25px;
+  min-width: 0;
+  min-height: 420px;
+  height: 100%;
+  will-change: transform;
+}
+
+/* Gradient border interno */
+.gradient-border-inner {
+  background: radial-gradient(50% 50% at 50% 50%,
+      rgba(169, 85, 247, 0.941) 0%,
+      rgba(10, 10, 10, 0) 100%);
+  z-index: 1;
+  flex: none;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: visible;
+}
+
+.gradient-border-inner-2 {
+  background: radial-gradient(50% 50% at 50% 50%,
+      rgba(169, 85, 247, 0.941) 0%,
+      rgba(10, 10, 10, 0) 100%);
+  z-index: 1;
+  flex: none;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: visible;
+}
+
+
+
+
+/* Gradient Transition to Contact Section */
+.gradient-transition-contact {
+  width: 100%;
+  height: 200px;
+  background: radial-gradient(25% 30% at 50% 31.4%,
+      rgba(168, 85, 247, 0.1) 0%,
+      #0a0a0a 100%);
+}
+
+/* Contact Section - Central Blob */
+.contact-blob-center {
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(100px);
+  background: radial-gradient(circle,
+      rgba(147, 51, 234, 0.4) 0%,
+      rgba(168, 85, 247, 0.3) 30%,
+      rgba(236, 72, 153, 0.2) 60%,
+      transparent 100%);
+}
+
+/* Background Text Effect - Shapely */
+.background-text-shapely {
+  font-size: clamp(12rem, 35vw, 32rem);
+  font-weight: 700;
+  line-height: 1;
+  background: linear-gradient(135deg,
+      rgb(210, 236, 255) 0%,
+      rgb(206, 162, 247) 50%,
+      rgb(255, 160, 208) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.05em;
+  user-select: none;
+  /* Effetto sfumato ai bordi */
+  filter: blur(4px);
+  text-shadow:
+    0 0 20px rgba(147, 51, 234, 0.15),
+    0 0 40px rgba(59, 130, 246, 0.12),
+    0 0 60px rgba(236, 72, 153, 0.1);
+  opacity: 0.10;
+}
+
+/* Contact Section with After Border */
+.contact-section-bordered::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid #222;
+  border-radius: 15px;
+  pointer-events: none;
+}
+
+.grid-bg {
+  background-image:
+    /* griglia grande */
+    linear-gradient(to right, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    /* griglia fine */
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    /* cerchi nei nodi */
+    radial-gradient(circle at 0 0, rgba(169, 85, 247, 0.70) 0, rgba(255, 255, 255, 0.26) 3px, transparent 4px),
+    radial-gradient(circle at 100px 100px, rgba(169, 85, 247, 0.70) 0, rgba(255, 255, 255, 0.26) 2px, transparent 3px);
+  background-size:
+    120px 120px, 120px 120px, 20px 20px, 20px 20px, 100px 100px, 100px 100px;
+  background-position:
+    0 0, 0 0, 0 0, 0 0, 0 0, 50px 50px;
 }

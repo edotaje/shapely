@@ -12,10 +12,8 @@ function App() {
       {/* Contenuto principale */}
       <div className="w-full max-w-4xl px-4 z-10">
         {/* Nav */}
-        <nav className="flex justify-center gap-6 mb-6 text-white/80">
-          <Link to="/" className="hover:underline">Home</Link>
-          <Link to="/about" className="hover:underline">About</Link>
-          <Link to="/contatti" className="hover:underline">Contatti</Link>
+        <nav className="absolute top-0 right-0 p-4 text-white/60">
+          <Link to="/wireframe" className="hover:underline">We are shaping our website...</Link>
         </nav>
         {/* Contenuto principale */}
         <div className="card bg-[rgba(40,40,55,0.30)] backdrop-blur-xl rounded-xl shadow-xl p-8 border border-white/10">

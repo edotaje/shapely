@@ -6,13 +6,16 @@
     <title>404</title>
     <meta http-equiv="refresh" content="0;url=/">
     <script>
-        // Salva il path richiesto per ripristinarlo lato client
         sessionStorage.setItem('redirectPath', location.pathname + location.search + location.hash);
     </script>
+
 </head>
 
 <body>
-    Redirecting...
+    <div class="flex flex-col items-center justify-center h-screen">
+        <p>Redirecting to home...</p>
+    </div>
+
 </body>
 
 </html>
