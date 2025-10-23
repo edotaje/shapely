@@ -1,4 +1,4 @@
-import { Mail, Calendar, Download, Linkedin } from "lucide-react";
+import { Mail, Calendar, Linkedin } from "lucide-react";
 import logo from "../assets/shapelynobg.png";
 
 interface ServiceCardProps {
