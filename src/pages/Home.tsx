@@ -1,5 +1,6 @@
 import { Mail, Calendar, Linkedin } from "lucide-react";
 import logo from "../assets/shapelynobg.png";
+import ParticleSwarm from "../components/ParticleSwarm";
 
 interface ServiceCardProps {
     title: string;
@@ -62,6 +63,8 @@ export default function Home() {
 
     return (
         <div className="min-h-screen bg-black text-gray-300 font-sans">
+            {/* Sciame di particelle interattivo */}
+            <ParticleSwarm />
 
             {/* Hero Section */}
             <section className="h-screen relative flex flex-col overflow-hidden">
@@ -83,7 +86,6 @@ export default function Home() {
                         <div className="w-10 h-10 ">
                             <img src={logo} alt="Shapely" className="w-full h-full object-contain" />
                         </div>
-                        <span className="text-white font-semibold text-lg">Shapely</span>
                     </div>
 
 
@@ -94,7 +96,11 @@ export default function Home() {
 
                 {/* Hero Content */}
                 <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-4">
-                    <h1 className="text-6xl md:text-7xl lg:text-8xl font-semibold gradient-text mb-6 tracking-tight">
+                    <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-neutral-300/80 dark:border-neutral-700/80 px-3 py-1 text-xs">
+                        <span className="h-2 w-2 rounded-full bg-emerald-500" />
+                        <span>Studio su invito | Referral-first</span>
+                    </div>
+                    <h1 className="text-6xl md:text-7xl lg:text-8xl font-semibold gradient-text mb-6 leading-tight pb-3">
                         Shapely Studio.
                     </h1>
                     <p className="text-lg md:text-xl font-light text-white/80 mb-10 max-w-2xl">
@@ -118,10 +124,9 @@ export default function Home() {
                     </a>
 
                     {/* Made with love - destra */}
-                    <div className="px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-xs flex items-center gap-2">
-                        <span>💜</span>
-                        <span>Made with love</span>
-                    </div>
+                    <a href="https://btindustries.it" className="px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-xs flex items-center gap-2 hover:bg-white/20 transition-all">
+                        BT
+                    </a>
                 </div>
 
                 {/* Gradiente di transizione verso la sezione successiva */}
@@ -167,16 +172,16 @@ export default function Home() {
             </section>
 
             {/* Keep in Touch */}
-            <div className="  px-6 py-20 grid-bg">
+            <div className="  px-6 py-20">
                 <section id="contatti" className="max-w-7xl mx-auto py-20 bg-[#0d0d0d] border-[#222] border-radius-15 relative overflow-hidden contact-section-bordered">
                     {/* Gradient border interno */}
                     <div className="gradient-border-inner-2"></div>
                     <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                        <h2 className="text-3xl md:text-4xl lg:text-4xl font-semibold gradient-text mb-10 tracking-wide">
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold gradient-text mb-20 tracking-wide">
                             Se ci siamo già conosciuti...
                         </h2>
                         <p className=" text-gray-300">
-                            Scrivici un messaggio con il tuo contesto o prenota 20 minuti: capiamo se possiamo aiutarti.
+                            Se sei arrivato fin qui, probabilmente qualcuno ti ha parlato di noi.
                         </p>
                         <div className="mt-8 flex flex-wrap justify-center gap-3">
                             <a href="mailto:info@shapely.it" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white backdrop-blur-sm border border-white/20 text-black text-sm hover:bg-white/20 transition-all">
@@ -198,9 +203,10 @@ export default function Home() {
             {/* Footer - Wireframe */}
             <footer className="py-10 border-t border-[#222]">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
-                    <div className="text-sm opacity-80">© {new Date().getFullYear()} Share Me di Edoardo Tajè — P.IVA 13381640963</div>
+                    <div className="text-sm opacity-80">© {new Date().getFullYear()} Share Me di Edoardo Tajè — P.IVA 13381640963 |
+                        <span className="text-sm opacity-80">💜 Made with love by BT Industries</span></div>
                     <div className="flex items-center gap-4 text-sm">
-                        <a href="https://btindustries.it" className="opacity-80 hover:opacity-100">About Us</a>
+                        <a href="https://btindustries.it" className="opacity-80 hover:opacity-100">Chi siamo</a>
                         <a href="/privacy" className="opacity-80 hover:opacity-100">Privacy Policy</a>
                         <a href="/privacy" className="opacity-80 hover:opacity-100">Cookie Policy</a>
 
