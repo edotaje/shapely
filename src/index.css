@@ -284,19 +284,19 @@ button {
   pointer-events: none;
 }
 
-.grid-bg {
-  background-image:
-    /* griglia grande */
-    linear-gradient(to right, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
-    /* griglia fine */
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    /* cerchi nei nodi */
-    radial-gradient(circle at 0 0, rgba(169, 85, 247, 0.70) 0, rgba(255, 255, 255, 0.26) 3px, transparent 4px),
-    radial-gradient(circle at 100px 100px, rgba(169, 85, 247, 0.70) 0, rgba(255, 255, 255, 0.26) 2px, transparent 3px);
-  background-size:
-    120px 120px, 120px 120px, 20px 20px, 20px 20px, 100px 100px, 100px 100px;
-  background-position:
-    0 0, 0 0, 0 0, 0 0, 0 0, 50px 50px;
+/* Modal Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
