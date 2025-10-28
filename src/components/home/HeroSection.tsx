@@ -68,10 +68,8 @@ export default function HeroSection() {
                 </div>
 
 
-                {/* Made with love - destra */}
-                <a href="https://btindustries.it" target="_blank" rel="noopener noreferrer" className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm flex items-center gap-2 hover:bg-white/20 transition-all">
-                    BT
-                </a>
+
+
             </div>
 
             {/* Gradiente di transizione verso la sezione successiva */}
