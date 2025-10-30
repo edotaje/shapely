@@ -34,8 +34,12 @@ export default function Footer() {
                 </div>
                 <div className="flex items-center gap-4 text-sm">
                     <a href="https://btindustries.it" className="opacity-80 hover:opacity-100">Chi siamo</a>
-                    <button onClick={() => setIsPrivacyModalOpen(true)} className="opacity-80 hover:opacity-100">Privacy Policy</button>
+                    <a href="/privacypolicy" className="opacity-80 hover:opacity-100">Privacy Policy</a>
+                    <a href="/cookiepolicy" className="opacity-80 hover:opacity-100">Cookie Policy</a>
+
+                    {/* <button onClick={() => setIsPrivacyModalOpen(true)} className="opacity-80 hover:opacity-100">Privacy Policy</button>
                     <button onClick={() => setIsCookieModalOpen(true)} className="opacity-80 hover:opacity-100">Cookie Policy</button>
+                    */}
                 </div>
             </div>
             <div className="mx-auto max-w-7xl mt-4 sm:px-6 lg:px-8 flex items-center justify-start">

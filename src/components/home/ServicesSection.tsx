@@ -3,19 +3,19 @@ import ServiceCard from "./ServiceCard";
 export default function ServicesSection() {
     const services = [
         {
-            title: "DESIGN",
-            description: "Attiva il potenziale del design per elevare il tuo business e trasforma la creatività nel tuo vantaggio competitivo.",
-            tags: ["BRANDING", "CX DESIGN", "USER RESEARCH", "VISUAL DESIGN", "UX/UI DESIGN", "CONTENT DESIGN", "MOTION DESIGN", "PRODUCT DESIGN"],
+            title: "Brand & Experience Design",
+            description: "Esperienze digitali che uniscono estetica, funzionalità e strategia. Progettiamo identità e prodotti che connettono persone e brand.",
+            tags: ["Brand Identity", "UX/UI Design", "Product & Service Design", "Design Systems", "Motion & Interaction", "Creative Prototyping", "AI-Driven Design", "Experience Innovation"],
         },
         {
-            title: "TECH",
-            description: "Potenzia i tuoi progetti con la tecnologia che ti aiuta a innovare, accelerare e scalare.",
-            tags: ["WEB DEVELOPMENT", "MOBILE APPS", "E-COMMERCE", "LANDING PAGES", "RAPID PROTOTYPING", "DATA & AI", "DEVOPS", "CYBERSECURITY"],
+            title: "Digital Development",
+            description: "Soluzioni digitali intelligenti che scalano con il tuo business. Uniamo sviluppo, automazione e intelligenza artificiale per dare vita a nuove possibilità.",
+            tags: ["Web & App Development", "AI & Automation", "Data Intelligence", "E-commerce Solutions", "Smart Interfaces", "Rapid Prototyping", "Cloud & DevOps", "Cybersecurity"],
         },
         {
-            title: "MARKETING",
-            description: "Fai crescere il tuo business con azioni capaci di attrarre l'attenzione, coinvolgere e convertire.",
-            tags: ["GROWTH MARKETING", "CONTENT STRATEGY", "CREATIVE CAMPAIGNS", "INFLUENCER MARKETING", "SEO", "ANALYTICS"],
+            title: "Growth & Performance",
+            description: "Strategie data-driven e contenuti creativi per accelerare la crescita. Dal brand awareness alla conversione, trasformiamo insight in risultati.",
+            tags: ["Growth & Performance", "AI Marketing", "Content Strategy", "Creative Campaigns", "Influencer & Community", "SEO & Visibility", "Analytics & Insights", "Digital Storytelling"],
         }
     ];
 

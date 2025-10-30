@@ -1,6 +1,7 @@
 import ParticleSwarm from "../components/ParticleSwarm";
 import HeroSection from "../components/home/HeroSection";
 import PhilosophySection from "../components/home/PhilosophySection";
+import PhilosophySection2 from "../components/home/PhilosophySection2";
 import ServicesSection from "../components/home/ServicesSection";
 import Footer from "../components/layout/Footer";
 
@@ -12,6 +13,7 @@ export default function Home() {
 
             <HeroSection />
             <PhilosophySection />
+            <PhilosophySection2 />
             <ServicesSection />
 
             <Footer />
