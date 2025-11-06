@@ -6,10 +6,10 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ title, description, tags }: ServiceCardProps) {
     return (
-        <div className="service-card-gradient">
-            {/* Gradient border interno */}
+        <div className="service-card-gradient z-1000">
+            {/* Gradient border interno 
             <div className="gradient-border-inner"></div>
-
+*/}
             {/* Contenuto card */}
             <div className="relative z-10 flex flex-col w-full">
                 {/* Title */}
