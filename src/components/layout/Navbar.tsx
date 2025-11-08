@@ -1,4 +1,3 @@
-import { Coffee } from "lucide-react";
 import logo from "../../assets/shapelynobg.png";
 
 export default function Navbar() {

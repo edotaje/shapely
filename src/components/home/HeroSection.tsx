@@ -2,7 +2,11 @@ import { Linkedin, MessageCircleHeart, Mail, MessageSquare, X } from "lucide-rea
 // import Navbar from "../layout/Navbar";
 import { useState } from "react";
 
-export default function HeroSection() {
+interface HeroSectionProps {
+    onOpenMore: () => void;
+}
+
+export default function HeroSection({ onOpenMore }: HeroSectionProps) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -35,12 +39,12 @@ export default function HeroSection() {
                 <p className="text-lg md:text-xl font-light text-white/80 mb-10 max-w-2xl">
                     Trasformiamo le tue idee in esperienze digitali straordinarie.
                 </p>
-                <a
-                    href="/more"
-                    className="px-6 py-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-md hover:bg-white/20 transition-all"
+                <button
+                    onClick={onOpenMore}
+                    className="px-6 py-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-md hover:bg-white/20 transition-all cursor-pointer"
                 >
                     Voglio sapere di più
-                </a>
+                </button>
             </div>
 
             {/* Floating Action Button - sinistra basso */}

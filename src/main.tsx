@@ -7,7 +7,6 @@ import Home from './pages/Home.tsx'
 import NotFound from './pages/NotFound.tsx'
 import CookiePolicy from './pages/CookiePolicy.tsx'
 import PrivacyPolicy from './pages/PrivacyPolicy.tsx'
-import More from './pages/More.tsx'
 
 
 
@@ -20,7 +19,6 @@ createRoot(document.getElementById('root')!).render(
         <Route path="*" element={<NotFound />} />
         <Route path="/cookiepolicy" element={<CookiePolicy />} />
         <Route path="/privacypolicy" element={<PrivacyPolicy />} />
-        <Route path="/more" element={<More />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

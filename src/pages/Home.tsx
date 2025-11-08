@@ -1,18 +1,26 @@
+import { useState } from "react";
 import ParticleSwarm from "../components/ParticleSwarm";
 import HeroSection from "../components/home/HeroSection";
-import PhilosophySection2 from "../components/home/PhilosophySection2";
-import ServicesSection from "../components/home/ServicesSection";
 import Footer from "../components/layout/Footer";
+import MorePanel from "../components/MorePanel";
 
 export default function Home() {
+    const [isMorePanelOpen, setIsMorePanelOpen] = useState(false);
+
     return (
         <div className="min-h-screen bg-black text-gray-300 font-sans">
             {/* Sciame di particelle interattivo */}
             <ParticleSwarm />
 
-            <HeroSection />
+            <HeroSection onOpenMore={() => setIsMorePanelOpen(true)} />
 
             <Footer />
+
+            {/* More Panel - Slide from bottom */}
+            <MorePanel
+                isOpen={isMorePanelOpen}
+                onClose={() => setIsMorePanelOpen(false)}
+            />
         </div>
     );
 }
