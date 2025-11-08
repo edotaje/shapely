@@ -1,31 +1,5 @@
-import { useState, useEffect } from "react";
-import Modal from "../Modal";
 
 export default function Footer() {
-    const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
-    const [isCookieModalOpen, setIsCookieModalOpen] = useState(false);
-
-    // Gestione apertura modal tramite URL hash
-    useEffect(() => {
-        const handleHashChange = () => {
-            const hash = window.location.hash;
-            if (hash === '#privacy-policy') {
-                setIsPrivacyModalOpen(true);
-            } else if (hash === '#cookie-policy') {
-                setIsCookieModalOpen(true);
-            }
-        };
-
-        // Controlla l'hash al caricamento della pagina
-        handleHashChange();
-
-        // Ascolta i cambiamenti dell'hash
-        window.addEventListener('hashchange', handleHashChange);
-
-        return () => {
-            window.removeEventListener('hashchange', handleHashChange);
-        };
-    }, []);
 
     return (
         <footer className="py-8 md:py-10 border-t border-[#222]">
